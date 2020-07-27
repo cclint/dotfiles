@@ -55,6 +55,7 @@ Plug 'scrooloose/nerdtree'
 
 Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
+Plugin 'scrooloose/syntastic'
 
 call plug#end()
 
