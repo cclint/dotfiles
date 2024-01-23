@@ -32,18 +32,15 @@ set number
 " spelling
 set spell spelllang=en_us
 
-
 " autocomplete parentheses
 inoremap        (  ()<Left>
 inoremap <expr> )  strpart(getline('.'), col('.')-1, 1) == ")" ? "\<Right>" : ")"
-
 
 " enable arrow keys
 noremap <Up> <NOP>
 noremap <Down> <NOP>
 noremap <Left> <NOP>
 noremap <Right> <NOP>
-
 
 map <C-n> :NERDTree
 
@@ -55,12 +52,22 @@ Plug 'scrooloose/nerdtree'
 
 Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
-Plugin 'scrooloose/syntastic'
+Plug 'scrooloose/syntastic'
 
 call plug#end()
-
 
 colorscheme gruvbox
 set background=dark
 
+" Filetype-specific Settings
+autocmd FileType python setlocal expandtab shiftwidth=4 softtabstop=4
 
+" Comment Headers
+" *****************
+" Your Custom Section
+" *****************
+
+" Backup and Swap Files
+set backup
+set backupdir=~/.vim/backup
+set directory=~/.vim/swap
