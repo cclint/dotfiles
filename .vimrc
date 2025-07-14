@@ -62,11 +62,6 @@ set background=dark
 " Filetype-specific Settings
 autocmd FileType python setlocal expandtab shiftwidth=4 softtabstop=4
 
-" Comment Headers
-" *****************
-" Your Custom Section
-" *****************
-
 " Backup and Swap Files
 set backup
 set backupdir=~/.vim/backup
